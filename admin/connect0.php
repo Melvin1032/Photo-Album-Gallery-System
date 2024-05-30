@@ -1,10 +1,17 @@
 <?php 
-$con = mysql_connect("localhost","root","");
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "photo-album";
 
-if (!$con)
-{
-  die();
+// Create connection
+$con = new mysqli($host, $username, $password, $database);
+
+// Check connection
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
 
-mysql_select_db("dotcode",$con);
+// No need to select database with MySQLi
+
 ?>

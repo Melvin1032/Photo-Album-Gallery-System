@@ -475,11 +475,11 @@ img{
         -o-user-select:none;
         -ms-user-select:none;
         user-select:none;-webkit-touch-callout:none;-moz-touch-callout:none;
-        -o-touch-callout:none;-ms-touch-callout:none;touch-callout:none;
+        /* -o-touch-callout:none;-ms-touch-callout:none;touch-callout:none; */
         -webkit-tap-highlight-color:transparent;-moz-tap-highlight-color:transparent;
         -o-tap-highlight-color:transparent;
         -ms-tap-highlight-color:transparent;
-        tap-highlight-color:transparent
+        /* tap-highlight-color:transparent */
       }
       
       .bottom-to-top{
