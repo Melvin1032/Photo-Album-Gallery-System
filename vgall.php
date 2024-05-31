@@ -1,3 +1,7 @@
+<?php session_start();
+if(isset($_SESSION['uname']))
+{
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,14 +57,11 @@ $astatus=$row['status'];
 		</div>
 <?php } ?>
 	</section>
-	
 
-			
 		</div>
 
 		
-		<div class="clearfix"></div>
-	</div>	
+
 	</div>	
 
 	
@@ -90,6 +91,15 @@ echo "</span>";
 		<div class="gallery-container1">
 			<h1>Hello</h1>
 		</div>
+
+		<?php
+}
+else
+{
+header("location:login.php");
+}
+?>
 </body>
+
 <?php include "footer.php"; ?>
 </html>
