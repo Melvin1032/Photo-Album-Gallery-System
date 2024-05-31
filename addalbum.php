@@ -38,13 +38,13 @@ $tmp=imagecreatetruecolor($newwidth,$newheight);
 
 imagecopyresampled($tmp,$src,0,0,0,0,$newwidth,$newheight,$width,$height);
 
-$filename = "acatch/".$rd. $_FILES['upload']['name'];
+$filename = "admin/acatch/".$rd. $_FILES['upload']['name'];
 imagejpeg($tmp,$filename,100);
 
 imagedestroy($src);
 imagedestroy($tmp); 
 $photo=$rd.$_FILES['upload']['name'];
-move_uploaded_file($_FILES["upload"]["tmp_name"],"aupload/".$rd.$_FILES["upload"]["name"]);
+move_uploaded_file($_FILES["upload"]["tmp_name"],"admin/aupload/".$rd.$_FILES["upload"]["name"]);
 
 if (empty($aname))
 {
@@ -55,9 +55,9 @@ else
 include "connect.php";
 
 $query="INSERT INTO tbl_album(name,adesc,image,date,status) VALUES ('$aname','$adesc','$photo','$adate','$status')";
-if(mysql_query($query))
+if(mysqli_query($con, $query))
 	{
-echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <a href='viewallalbums.php'>View albums</a> |<a href='addevent.php'> Add new album</a></div>";
+echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <a href='admin/viewallalbums.php'>View albums</a> |<a href='addevent.php'> Add new album</a></div>";
 	}
 	else
 	{
@@ -113,22 +113,22 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <a
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
+                              
                             </div>
-                            <!-- /.row (nested) -->
+                        
                         </div>
-                        <!-- /.panel-body -->
+          
                     </div>
-                    <!-- /.panel -->
+   
                 </div>
-                <!-- /.col-lg-12 -->
+   
             </div>
-            <!-- /.row -->
+    
         </div>
-        <!-- /#page-wrapper -->
+
 
     </div>
-    <!-- /#wrapper -->
+
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>

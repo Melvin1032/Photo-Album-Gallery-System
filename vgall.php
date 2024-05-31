@@ -88,10 +88,6 @@ echo "</span>";
 		</div>
 	
 
-		<div class="gallery-container1">
-			<h1>Hello</h1>
-		</div>
-
 		<?php
 }
 else
@@ -100,6 +96,6 @@ header("location:login.php");
 }
 ?>
 </body>
-
+<br><br><br><br><br><br><br>
 <?php include "footer.php"; ?>
 </html>

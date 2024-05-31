@@ -63,7 +63,7 @@
 footer {
     width: 100%;
     position: relative;
-    bottom: -100px;
+    bottom: 0;
     background: rgb(15,15,15);
     background: linear-gradient(90deg, rgba(15,15,15,1) 0%, rgba(29,14,0,1) 100%);
     color: white;
