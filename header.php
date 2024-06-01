@@ -22,17 +22,24 @@
   	
 </head>
 
-
+<body>
  <nav class="navbar navbar-dark bg-dark fixed-top">
 <a class="navbar-brand" href="#">
     <img src="icons/main-logo2.png" alt="Brand Logo" style="height: 80px;">
 </a>
 
-<ul>
-    <a class="nav-linkB" href="home.php">HOME</a>
-    <a class="nav-linkB" href="vgall.php">GALLERY</a>
-</ul>
+        <li class="nav-item dropdowns">
+            <a class="nav-link" href="home.php">HOME</a>
+          </li>
+
+          <li class="nav-item dropdowns">
+            <a class="nav-link" href="vgall.php">SHOW ALBUMS</a>
+          </li>
+
+    
+
 <li class="nav-item dropdowns">
+
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">ALBUMS</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="addalbum.php">Add Albums</a></li>
@@ -92,7 +99,7 @@
   </div>
 </nav> 
 
-<body>
+
 
 </body>
 </html>

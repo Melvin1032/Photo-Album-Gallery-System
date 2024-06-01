@@ -26,7 +26,14 @@ if(isset($_SESSION['uname']))
 </head>
 <?php include 'header.php'?>
 <body>
-<br><br><br><br><br><br><br><br><br>
+
+<div class="albums-c1">
+	<h1 class="ac1-title">ALBUMS</h1>
+	<p>Browse through our collection of photo albums, showcasing captivating moments and cherished memories. Explore a variety of <br>
+	themes, events, and locations captured through our lens. Start exploring now and relive the beauty and joy captured in each album.</p>
+</div>
+
+<div class="albums-container">
 <section class="wrapper cl" >
 	
 			<?php  
@@ -46,29 +53,37 @@ $aid=$row['albumid'];
 $aname=$row['name'];
 $astatus=$row['status'];
 
+
 ?>
 		<div class="pic" style="margin-right:1px;margin-left:1px;margin-top:1px;margin-bottom:1px">
         <?php echo "<img src='admin/acatch/$aimage' class='pic-image' alt='Pic' alt='$aname'>"; ?>
+
+			
+	
 		   <?php echo"<a href='gallery.php?id=$aid'>
 		    <span class='pic-caption left-to-right'>
-            
+			<h3>ALBUM TITLE:</h3>   
 		        <p style='color:#FFFFFF;font-size:24px'>$aname</p>
-		    </span></a>"?>
-		</div>
-<?php } ?>
-	</section>
+		    </span></a>"
+			
+			?>
 
 		</div>
-
 		
+<?php } ?>
 
-	</div>	
 
-	
-<div class="seeall_div2">
-			<!--   NAVIGATION FOR BLOG POST -->
+
+
+
+
+
+<br><br><br> 
+
+<!-- <div class="seeall_div2">
+		
 				<div class="blog_navigation">
-					<div style="margin-top:20px;margin-left:180px">
+					<div>
                
 <?php
 $sql = "SELECT COUNT(name) FROM tbl_album";
@@ -79,12 +94,23 @@ $total_pages = ceil($total_records / 12);
 for ($i=1; $i<=$total_pages; $i++) {
 echo "<span class='navigations_items_span'>";
 echo "<b>Page: </b>";
-echo "<a href='index.php?page=".$i."' class='navigation_item selected_navigation_item'>".$i."</a>";							
+echo "<a href='vgall.php?page=".$i."' class='navigation_item selected_navigation_item'>".$i."</a>";							
 echo "</span>";
 };
 ?>				
 					</div>
 				</div>
+		</div> -->
+	</section>
+
+		</div>
+
+		
+
+	</div>	
+
+	
+
 		</div>
 	
 
@@ -95,7 +121,8 @@ else
 header("location:login.php");
 }
 ?>
+
 </body>
-<br><br><br><br><br><br><br>
+
 <?php include "footer.php"; ?>
 </html>

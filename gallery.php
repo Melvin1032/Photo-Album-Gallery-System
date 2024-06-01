@@ -7,23 +7,11 @@
 	
 	<meta charset="utf-8">
 	<title>DotCode - Gallery</title>
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
 	<!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	
-
-		<link href="litebox-master/assets/css/litebox.css" rel="stylesheet" type="text/css" media="all" />
-		
-
-	<!-- The Menu -->
-	<link href="stylesheets/styles.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-
-	<!-- Optional - Adds useful class to manipulate icon font display -->
-	<link rel="stylesheet" href="pe-icon-7-stroke/css/helper.css">
 
 
 	
@@ -31,39 +19,10 @@
 <body>
 
 
+<?php include 'header.php'?>
 
-<div class="header">
-	 <div class="container">
-		 <div class="logo">
-			 <a href="index.php"><h2>&lt;DOTCODE&gt;</h2></a>
-		 </div>
-		 <div class="top-menu">
-				<span class="menu"> </span>
-				<ul>
-					 <li><a href="#.html">HOME</a></li>
-					 <li><a href="#.html">ABOUT US</a></li>
-					 <li class="active"><a href="index.php">GALLERY</a></li>					
-					 <li><a href="#.html">BLOG</a></li>					 
-					 <li><a href="#.html">CONTACT</a></li>
-                     <li>|</li>		
-                     <li><a href="admin/login.php">Admin panel</a></li>			 
-				 </ul>
-		 </div>
-		 <div class="clearfix"></div>
-			 <!--script-nav-->
-		 <script>
-		 $("span.menu").click(function(){
-		 $(".top-menu ul").slideToggle("slow" , function(){
-		 });
-		 });
-		 </script>		  
-	 </div>
-</div>		<!-- Blog Section
-	================================================== -->
-<div class="gallery-head">
-	 <div class="gallery-info">
-		 <div class="container">
-			 <a href="gallery.php">Home/</a>
+			
+
                        <?php  
 include 'connect.php';
 $sql = "SELECT * FROM tbl_album where albumid='$aid'";
@@ -84,6 +43,7 @@ $adesc=$row['adesc'];
 $astatus=$row['status'];
 
 ?>
+<br><br>
 				<h2>
 				<?php echo "$aname"; ?> 
 				</h2>
@@ -191,4 +151,5 @@ $gimage=$row['gimages'];
 ================================================== -->
 </body>
 
+<?php include 'footer.php'?>
 </html>

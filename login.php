@@ -109,7 +109,7 @@ else
 ?>
 </body>
 
-    <script>const container = document.getElementById('container');
+<script>const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 
@@ -188,7 +188,7 @@ body{
 }
 
 .container button{
-    background-color: #ff7f00;
+    background-color: rgb(253, 87, 26);
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -302,9 +302,8 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: rgb(253, 87, 26);
     height: 100%;
-    background-color: #ff7f00;
     color: #fff;
     position: relative;
     left: -100%;

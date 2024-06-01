@@ -26,10 +26,10 @@ if(isset($_SESSION['uname']))
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="3000">
-      <img src="icons/laptop.png" class="d-block w-100" alt="..."  style="width: 200px; height: 500px;">
+      <img src="icons/laptop.png" class="d-block w-100" alt="..."  style="width: 200px; height: 450px;">
     </div>
     <div class="carousel-item" data-bs-interval="3000">
-    <img src="icons/group_pic2.png" class="d-block w-100" alt="..."  style="width: 200px; height: 500px;">
+    <img src="icons/group_pic2.png" class="d-block w-100" alt="..."  style="width: 200px; height: 450px;">
     </div>
 
   </div>
@@ -44,55 +44,10 @@ if(isset($_SESSION['uname']))
 </div> 
 </div>
 
-
-<section class="trip">
-      <div class="section__container trip__container">
-        <h2 class="section__title">Why Choose Gallery Grid?</h2>
-        <p class="section__subtitle">
-          Explore your suitable and dream places around the world. Here you can
-          find your right destination.
-        </p>
-        <div class="trip__grid">
-          <div class="trip__card">
-            <img src="assets/trip-1.jpg" alt="trip" />
-            <div class="trip__details">
-              <p>Wasserwerk Frelberg, Germany</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $300</div>
-                <button class="book__now">Book Now</button>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="assets/trip-2.jpg" alt="trip" />
-            <div class="trip__details">
-              <p>Patagonia, Argentina and Chile</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $450</div>
-                <button class="book__now">Book Now</button>
-              </div>
-            </div>
-          </div>
-          <div class="trip__card">
-            <img src="assets/trip-3.jpg" alt="trip" />
-            <div class="trip__details">
-              <p>The Dolomites, Italy</p>
-              <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-              <div class="booking__price">
-                <div class="price"><span>From</span> $400</div>
-                <button class="book__now">Book Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="view__all">
-          <button class="btn">View All</button>
-        </div>
-      </div>
-    </section>
+<section class="section2">
  
+</section>
+
 <!-- 
 <div class="homec2">
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
