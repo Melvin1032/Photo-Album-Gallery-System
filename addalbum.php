@@ -2,18 +2,11 @@
 if(isset($_SESSION['uname']))
 {
 ?>
-<?php include "header.php"; ?>
 
+<?php include 'header.php'; ?>
 
 <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Add Album</h1>
-                </div>
-                
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
+           
             <script type="application/javascript">
 function img_up(){var fup = document.getElementById('upload');var fileName = fup.value;var ext = fileName.substring(fileName.lastIndexOf('.') + 1);if(ext == "JPEG" || ext == "jpeg" || ext == "jpg" || ext == "JPG"){return true;}else{alert("only jpeg format supported!");fup.focus();return false;}}</script>
 <?php
@@ -70,84 +63,234 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <a
 }	
 ?>
 
-            
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Fill This Form To Add Album (Only upload jpg files only)
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form action="#" method="post" enctype="multipart/form-data" name="upload">
-                                       
-                                        <div class="form-group">
-                                            <label>Album Name or Title</label>
-                                            <input class="form-control" placeholder="Enter Title" name="aname">
-                                                <p class="help-block">Example "Summertime Saga Memories"</p>
-                                        
-                                        </div>
-                                        <div class="form-group">
-                                        
-                                            <label>Album Description</label>
-                                             <p class="help-block" style="font-weight:bold">Max 1000 Character Allow </p>
-                                             <textarea class="form-control" rows="3" placeholder="Enter Description" name="adesc" maxlength="1000"></textarea>
-                                            
-                                               
-                                        
-                                        </div>
 
-                                        <br><br>
-                                       
-                                        <div class="form-group">
-                                            <label>Album Cover Image</label>
-                                            <input type="file" name="upload"  id="upload" />
-                
-                                            <p class="help-block">Example "Recomended Image Size in pixel 400 X 300"</p>
-                                        </div>
-                                        
-                                        <button type="submit" class="btn btn-primary" name="submit">Submit Button</button>
-                                        <button type="reset" class="btn btn-default">Reset Button</button>
-                                    </form>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                                </div>
-                              
-                            </div>
-                        
-                        </div>
-          
-                    </div>
-   
-                </div>
-   
-            </div>
+
+
+<style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* ALERT */
+
+/* Styles for the alert messages */
+
+
+
+
+.container-upload {
+  height: 110vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.card {
+  border-radius: 50px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 600px;
+  height: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 30px 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  
+}
+
+.drop_box {
+  margin: 10px 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_box h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #005af0;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  text-decoration: none;
+  background-color: black;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid orange;
+}
+
+.button-container {
+    position: relative;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.btn:nth-child(1) {
+    background-color: #00000000;
+    color: white;
+    outline: 1px solid green;
+}
+
+.btn:nth-child(1):hover {
+    background-color: green;
+    outline: 1px solid green;
     
-        </div>
+}
+
+.btn:nth-child(2) {
+    background-color: #00000000;
+    color: white;
+    margin-left: 10px;
+    outline: 1px solid crimson;
+}
+
+.btn:nth-child(2):hover {
+    background-color: crimson;
+    outline: 1px solid crimson;
+    
+}
 
 
+
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #e2e2e2;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+.form-group {
+        margin-bottom: 20px;
+    }
+    h2 {
+        color: orange; /* Orange title */
+    }
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc; /* Grey border */
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #fff; /* White background */
+        color: #333; /* Black text */
+    }
+    .help-block {
+        color: #666; /* Grey help block text */
+        font-style: italic;
+    }
+    .drop_box {
+        border: 2px dashed orange; /* Orange dashed border */
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .drop_box header h4 {
+        color: orange; /* Orange header text */
+    }
+    .drop_box p {
+        color: #666; /* Grey file supported text */
+    }
+    .btn {
+        background-color: orange; /* Orange button */
+        color: #fff; /* White text */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #ff8c00; /* Darker orange on hover */
+    }
+    </style>
+
+<form action="#" method="post" enctype="multipart/form-data" name="upload">
+<div class="container-upload">
+  <div class="card">
+
+    <div class="form-group">
+        <label><h2>Album Name or Title</h2></label>
+        <input class="form-control" placeholder="Enter Title" name="aname" required>
+        <p class="help-block">Example "Summertime Saga Memories"</p>
+    </div>
+        <br>
+    <div class="form-group">
+        <label><h2>Album Description</h2></label>
+        <textarea class="form-control" rows="3" placeholder="Enter Description" name="adesc" maxlength="1000" required></textarea>   
+        <p class="help-block">Example "Summertime Saga Memories"</p>
     </div>
 
+    <br>
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+    <div class="drop_box">
+      <header>
+      <h4>Album Cover Image</h4>
+      </header>
+      <p>Files Supported: JPEG Only</p> 
+      <input type="file" name="upload" id="upload" required>
+    </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+   <div class="button-container">
+   <button type="submit" class="btn btn-primary" name="submit">Submit Button</button>
+   <button type="reset" class="btn btn-default">Reset Button</button>
+    
+</div>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+  </div>
+</div>
+</form>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/sb-admin-2.js"></script>
+
 <?php
 }
 else
 {
 header("location:login.php");
 }
+
 ?>
+
+<script>
+  const dropArea = document.querySelector(".drop_box");
+const button = dropArea.querySelector("button");
+const fileInput = dropArea.querySelector("input[type=file]");
+
+button.addEventListener("click", function() {
+  fileInput.click();
+});
+
+</script>
+
 </body>
 <?php include "footer.php"; ?>
 </html>
