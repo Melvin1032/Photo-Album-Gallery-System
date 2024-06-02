@@ -68,7 +68,7 @@ footer {
     background: linear-gradient(90deg, rgba(15,15,15,1) 0%, rgba(29,14,0,1) 100%);
     color: white;
     padding: 100px  0 30px;
-    border-top-left-radius: 125px;
+    /* border-top-left-radius: 125px; */
     font-size: 15px;
     font-family: 'popins', sans-serif
 }

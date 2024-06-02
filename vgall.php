@@ -76,15 +76,13 @@ $astatus=$row['status'];
 
 
 
-
-
 <br><br><br> 
 
-<!-- <div class="seeall_div2">
+<div class="seeall_div2">
 		
 				<div class="blog_navigation">
 					<div>
-               
+            <h6>Pages</h6>   
 <?php
 $sql = "SELECT COUNT(name) FROM tbl_album";
 $rs_result = mysqli_query($con, $sql);
@@ -93,14 +91,15 @@ $total_records = $row[0];
 $total_pages = ceil($total_records / 12);
 for ($i=1; $i<=$total_pages; $i++) {
 echo "<span class='navigations_items_span'>";
-echo "<b>Page: </b>";
-echo "<a href='vgall.php?page=".$i."' class='navigation_item selected_navigation_item'>".$i."</a>";							
+echo "<b>  </b>";
+echo "<a href='vgall.php?page=".$i."' class='blog_navigation'>".$i."</a>";						
 echo "</span>";
 };
+
 ?>				
 					</div>
 				</div>
-		</div> -->
+		</div> 
 	</section>
 
 		</div>
@@ -121,6 +120,10 @@ else
 header("location:login.php");
 }
 ?>
+
+
+
+
 
 </body>
 
