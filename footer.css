@@ -1,0 +1,119 @@
+
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: rgb(15,15,15);
+    background: linear-gradient(90deg, rgba(15,15,15,1) 0%, rgba(29,14,0,1) 100%);
+    color: white;
+    padding: 100px  0 30px;
+    /* border-top-left-radius: 125px; */
+    font-size: 15px;
+    font-family: 'popins', sans-serif
+}
+
+.col img {
+    width: 100px;
+    height:100px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex ;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+.email-id {
+    width: fit-content;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.links {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+
+.links li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* Link color */
+    font-size: 16px; /* Font size for links */
+}
+
+
+form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+.fa-envelope {
+    padding-right: 10px;
+}
+
+form .far {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+form button {
+    background: transparent;
+    border:0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fas {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+    margin: 30px 0;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px
+}

@@ -10,15 +10,6 @@
     <link rel="stylesheet" href="style.css">
 
 
-    <script src="js/jquery.min.js"></script>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="stylesheets/navigation.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/style1.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/style_common.css" />
-    <link href="litebox-master/assets/css/litebox.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="stylesheets/styles.css" rel="stylesheet" type="text/css">
-	  <link rel="stylesheet" href="pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-
   	
 </head>
 
@@ -28,76 +19,80 @@
     <img src="icons/main-logo2.png" alt="Brand Logo" style="height: 80px;">
 </a>
 
-        <li class="nav-item dropdowns">
-            <a class="nav-link" href="home.php">HOME</a>
-          </li>
+      <div class="nav">
+          <ul>
+            </i>
+            <li><a href="home.php">HOME</a></li>
+            <li><a href="vgall.php">GALLERY</a></li>
+            <li><a href="about.php">ABOUT US</a></li>
+            <li><a href="faq.php">FAQ's</a></li>
 
-          <li class="nav-item dropdowns">
-            <a class="nav-link" href="vgall.php">SHOW ALBUMS</a>
-          </li>
-
-    
-
-<li class="nav-item dropdowns">
-
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">ALBUMS</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="addalbum.php">Add Albums</a></li>
-              <li><a class="dropdown-item" href="viewallalbums.php">View Albums</a></li>
-              <li><a class="dropdown-item" href="home.php">Back to Homepage</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdowns">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">UPLOADS</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>    
 
     
     
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ADDITIONAL SETTINGS</h5>
+       <img src="icons/main-logo2.png"  class="offcanvas-title" id="offcanvasDarkNavbarLabel" alt="">
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
       </div>
+      
       <div class="offcanvas-body">
+      <hr class="overview">
+      <p class="hr-text"></p>
+
+      <li class="nav-item dropdown">
+            <a href="#" role="button">
+            <i class='bx bx-home-alt bx-tada' style='color:#ff7703' ></i> HOMEPAGE
+            </a>
+            
+
+
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Frequently Asked Questions</a>
-          </li>
-          <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Upload Photos
+            <i class='bx bxs-grid-alt bx-tada' style='color:#ff7703' ></i> ALBUMS
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Add Photo</a></li>
-              <li><a class="dropdown-item" href="#">View Photos</a></li>
+              <li><a class="dropdown-item" href="addalbum.php">Create Album</a></li>
+              <li><a class="dropdown-item" href="viewallalbums.php">View Albums (Album Management)</a></li>
+            </ul>    
+                    
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class='bx bx-upload bx-tada' style='color:#ff7703' ></i> UPLOADS
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Add Photos (Upload)</a></li>
+              <li><a class="dropdown-item" href="#">View Photos (Photo Management)</a></li>
               <li>
-                <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
+
+       
+
+
+            <br><br><br><br><br>
+            <hr class="overview">
+            <p class="hr-text">ACCOUNTS</p>
+          
+       
+          
           </li>
         </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-        </form>
+       
       </div>
     </div>
   </div>
 </nav> 
+            
+          </ul>
+        </div>
+
+  
 
 
 

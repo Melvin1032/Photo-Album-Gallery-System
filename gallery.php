@@ -8,28 +8,19 @@
 	<meta charset="utf-8">
 	<title>DotCode - Gallery</title>
 
-	<!-- Mobile Specific Metas
-  ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="litebox-master/assets/css/litebox.css" rel="stylesheet" type="text/css" media="all" />
 
-
-
+<?php include 'header.php'?>
 	
 </head>
 <body>
 
-
-<?php include 'header.php'?>
-
-			
-
-                       <?php  
+<?php  
 include 'connect.php';
 $sql = "SELECT * FROM tbl_album where albumid='$aid'";
 // Assuming $con is your MySQL connection
 $rs_result = mysqli_query($con, $sql);
-
-
 
 
 		
@@ -114,7 +105,6 @@ $gimage=$row['gimages'];
 	================================================== -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-		<script src="litebox-master/assets/js/smoothscroll.min.js" type="text/javascript"></script>
 		<script src="litebox-master/assets/js/images-loaded.min.js" type="text/javascript"></script>
 		<script src="litebox-master/assets/js/tipsy.min.js" type="text/javascript"></script>
 		<script src="litebox-master/assets/js/backbone.js" type="text/javascript"></script>

@@ -69,7 +69,7 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
     <p>CLICK HERE TO CREATE YOUR ALBUM</p>
     </div>
 <div class="navigation">
-<i id="sized" class='bx bxs-file-plus bx-flip-horizontal bx-tada' style='color:#ff7500'  ></i>
+<i id="sized"class='bx bx-image-add bx-tada' style='color:#ff7703' ></i>
     <span></span>        
   </button>
     <div id="myModal" class="modal">
@@ -207,9 +207,9 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 }
 
 .card h3 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
-  top: 40px;
+  top: 50px;
   
 }
 
@@ -367,7 +367,7 @@ body {
     background: url(icons/navbg-blur.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
 }
 
 .container {
@@ -394,7 +394,7 @@ body {
 .container p {
   position: absolute;
   left: 50%;
-  top: 800px;
+  top: 720px;
   transform: translate(-50%, -50%);
   font-size: 17px;
   color: gray;
@@ -448,8 +448,8 @@ hr {
     position: absolute;
     left: 47%;
     transform: translate(-50%, -50%);
-    top: 650px;
-    font-size: 100px;
+    top: 600px;
+    font-size: 80px;
     color:transparent;
     background-color: transparent;
     border: transparent;
@@ -492,7 +492,7 @@ hr {
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s;
+    animatiOn-duration: 0.4s;
     backdrop-filter: blur(0.5px); /* Adjust the blur radius as needed */
     background-color: #ffffffa4;
 }
