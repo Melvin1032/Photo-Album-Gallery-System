@@ -5,7 +5,7 @@ if(isset($_SESSION['uname']))
 
 <?php include 'header.php'?>
 <div id="page-wrapper">
-           
+
             <script type="application/javascript">
 function img_up(){var fup = document.getElementById('upload');var fileName = fup.value;var ext = fileName.substring(fileName.lastIndexOf('.') + 1);if(ext == "JPEG" || ext == "jpeg" || ext == "jpg" || ext == "JPG"){return true;}else{alert("only jpeg format supported!");fup.focus();return false;}}</script>
 <?php
@@ -40,7 +40,7 @@ move_uploaded_file($_FILES["upload"]["tmp_name"],"admin/aupload/".$rd.$_FILES["u
 
 if (empty($aname))
 {
- echo " <div class='alert alert-danger'><strong>ERROR</strong> - Empty fields are not allowed !</div> "; 
+ echo " <div class='alert alert-danger'><strong>ERROR</strong> - Empty fields are not allowed !</div> ";
  }
 else
 {
@@ -48,39 +48,31 @@ include "connect.php";
 
 $query="INSERT INTO tbl_album(name,adesc,image,date,status) VALUES ('$aname','$adesc','$photo','$adate','$status')";
 if(mysqli_query($con, $query))
-	{
-echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <br> <a href='admin/viewallalbums.php'>View albums</a> |<a href='addevent.php'> Add new album</a></div>";
-	}
-	else
-	{
-		echo "error";
-		print mysql_error();
-	}
+    {
+      
+echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <br> <a href='viewallalbums.php'>View albums</a> |<a href='addalbum.php'> Add new album</a></div>";
+?>
+<script>
+    // Hide the form when success alert is displayed
+    document.getElementById('albumForm').style.display = 'none';
+</script>
+<i class='bx bx-check-circle' style='color:#08bf1b' ></i>
+<?php
+    }
+    else
+    {
+        echo "error";
+        print mysql_error();
+    }
 
 // echo "<script>location.href='addevent.php </script";
    }
-}	
+}   
 ?>
 
 <body class="addAlbum">
-  <div class="container">
-  <h5>Easily share your memories! <br>
-   Create your album gallery now.</h5>
-    <p>CLICK HERE TO CREATE YOUR ALBUM</p>
-    </div>
-<div class="navigation">
-<i id="sized"class='bx bx-image-add bx-tada' style='color:#ff7703' ></i>
-    <span></span>        
-  </button>
-    <div id="myModal" class="modal">
-    <!-- Modal content -->
-      <div class="modal-content animated           zoomIn">
-      <div class="modal-header">
-         <span class="close">×</span>
-     </div>
-        
- 
-<form action="" method="post" enctype="multipart/form-data" name="upload">
+   
+<form id="albumForm" action="" method="post" enctype="multipart/form-data" name="upload">
 <div class="container-upload">
   <div class="card">
     <div class="form-group">
@@ -104,7 +96,9 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
       <p>Files Supported: JPEG Only.
         <br>Best If you use 3:2 Image Ratio for Album Cover</p> 
       
-      <input type="file" name="upload" id="upload" accept=".jpg, .jpeg" required>
+      <div class="file-upload-container">
+         <input type="file" name="upload" id="upload" accept=".jpg, .jpeg" required>
+      </div>
     </div>
 
    <div class="button-container">
@@ -119,6 +113,19 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 </body>
 
 <style>
+
+  
+@font-face {
+  font-family: 'Cake';
+  src: url(webfonts/Cakewalk.ttf);
+}  
+
+
+@font-face {
+  font-family: 'Drep';
+  src: url(webfonts/DREPHONIC.ttf);
+}  
+
   
 
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -127,45 +134,73 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 /* ALERT */
 
 /* Base alert styles */
-.alert {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  width: 500px; /* Adjust the max-width if needed */
-  font-family: "Poppins", sans-serif;
-  text-decoration: none;
-  padding:0 90px;
-  margin-bottom: 20px;
+.alert-success {
+  padding-top: 20px;
+  height: 100px;
+  color: #155724;
+  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
 
 }
+
 
 
 .alert-danger {
   color: #721c24;
   background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
- 
+}
 
+.bx.bx-check-circle {
+    position: relative;
+    color: #08bf1b; /* Set the color */
+    z-index: 9999; /* Set a high z-index to bring it to the front */
+    font-size: 100px;
+    top: 580px;
+    left: 47%; /* Move the element to the middle of its container */
+    transform: translateY(-50%); /* Adjust for center alignment */
+    animation: burst 2.5s ease;
+    animation-fill-mode: forwards;
+   
+}
+
+
+
+@keyframes burst {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .alert-success {
   padding-top: 20px;
-  height: 100px;
+  width: 800px;
+  height: 400px;
   position: absolute;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  top: 500px;
-  color: #155724;
-  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
-
-
+  margin-top: 100px; /* Half of the height */
+  color: green;
+  border: none;
+  z-index: 999; /* Adjust the z-index value */
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.842));
+  backdrop-filter: blur(5.5px); /* Adjust the blur radius as needed */
+  border-radius: 20px;
+  font-size: 25px;  
+  font-family: 'Drep';
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); 
+  padding: 100px 0;
 }
+
+
 
 .alert a {
   text-decoration: none;
+  font-size: 30px;
+  font-family 'Drep';
+
 }
 
 
@@ -173,37 +208,48 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
     position: relative;
     margin: auto;
     color: white;
-    padding: 40px 15px;
- 
+}
+
+.alert-success {
+    text-align: center; /* Center the content horizontally */
 }
 
 .alert-success a:hover {
-    color: #3c763d;
+    color: orange;
+    text-decoration: underline;
+    
 }
+
+
+
+
+
 
 
 
 
 .container-upload {
-  height: 40vh;
+  height: 115vh;
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
   border: none;
   outline: none;
+  
 }
 
 .card {
   border-radius: 50px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   width: 600px;
-  height: 700px;
+  height: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0  30px 40px;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0 5px 60px 0 rgba(255, 255, 255, 0.5);
 }
 
 .card h3 {
@@ -236,6 +282,22 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
   font-size: 1px;
   color: #a3a3a3;
 }
+
+.file-upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the file input */
+input[type="file"] {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+
 
 .btn {
   text-decoration: none;
@@ -367,7 +429,7 @@ body {
     background: url(icons/navbg-blur.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 130vh;
 }
 
 .container {
@@ -614,6 +676,8 @@ header("location:login.php");
 
 ?>
 
-<br><br><br><br><br><br>
+
+
+
 <?php include "footer.php"; ?>
 </html>

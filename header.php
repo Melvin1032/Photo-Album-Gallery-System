@@ -45,7 +45,7 @@
       <p class="hr-text"></p>
 
       <li class="nav-item dropdown">
-            <a href="#" role="button">
+            <a href="home.php" role="button">
             <i class='bx bx-home-alt bx-tada' style='color:#ff7703' ></i> HOMEPAGE
             </a>
             

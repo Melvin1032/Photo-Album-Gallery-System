@@ -33,6 +33,7 @@ footer {
     width: fit-content;
     margin-bottom: 40px;
     position: relative;
+
 }
 
 
@@ -46,6 +47,7 @@ footer {
 .links {
     list-style-type: none; /* Remove default list styles */
     padding: 0; /* Remove default padding */
+    
 }
 
 
@@ -56,14 +58,7 @@ footer {
 }
 
 
-form {
-    padding-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
-}
+
 .fa-envelope {
     padding-right: 10px;
 }

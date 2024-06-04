@@ -73,15 +73,11 @@ $astatus=$row['status'];
 <?php } ?>
 
 
-
-
-
 <br><br><br> 
 
 <div class="seeall_div2">
 		
-				<div class="blog_navigation">
-					<div>
+				<div class="blog_navigation"><div>
             <h6>Pages</h6>   
 <?php
 $sql = "SELECT COUNT(name) FROM tbl_album";
