@@ -34,11 +34,20 @@ $adesc=$row['adesc'];
 $astatus=$row['status'];
 
 ?>
+
+<div class="picGallery">
+<?php echo "<img src='admin/acatch/$aimage' class='pic-image' alt='Pic' alt='$aname'>"; ?>
 <br><br>
-				<h2>
+				<h6>
 				<?php echo "$aname"; ?> 
-				</h2>
-            
+				</h6>
+
+				<p><?php echo "$adesc"; ?></p>
+				<?php } ?>
+</div>
+
+				
+            <br><br><br><br><br>
              
            			 
 		 </div>		 
@@ -50,9 +59,9 @@ $astatus=$row['status'];
 		<div class="container">
 			<div class="one-whole text-center">
             
-            <p><?php echo "$adesc"; ?></p>
-				<?php } ?>
-                <hr style="border:solid 1px;margin-top:0px;">
+
+                <hr style="border:solid 1px black;margin-top:-70px;">
+				
 <p style="margin-left:75px">
 				<?php  
 		include "connect.php";
@@ -91,7 +100,7 @@ $gimage=$row['gimages'];
 	<div class="sixteen columns bottom_line_dev">	
 		
 <br/><br/>		
-<hr style="border:solid 1px;margin-top:0px">
+<hr style="border:solid 1px black;margin-top: 0px;">
 <br/>
 <br/>
 <br/>

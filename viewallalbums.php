@@ -8,15 +8,12 @@ if(isset($_SESSION['uname']))
 <div class="vall-container">
 <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Your Albums</h1>
-                </div>
                 
 
             </div>
 
             
-            <div class="row">
+            <div class="rows">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -35,11 +32,12 @@ $rs_result = mysqli_query ($con,$sql);
                                     
 <thead>
                                         <tr>
-                                            <th width="20%">Albumname</th>
-                                                                                       <th>Albumdesc</th>
+                                            <th style="color: rgb(58, 58, 58);"><ul>ALBUM NAME</ul></th>
+                                            <th style="color: rgb(58, 58, 58);"><ul>ALBUM DESCRIPTION</ul></th>
 
-                                            <th>Images</th>
-											<th colspan=2 width="18%">Action (Delete & Edit)</th>
+                                            <th style="color: rgb(58, 58, 58);"><ul>ALBUM COVER PHOTO (click on the image to change)</ul></th>
+                                            <th style="color: rgb(58, 58, 58);"><ul>Action (Delete & Edit)</ul></th>
+											
 											
 											
                                             
@@ -51,20 +49,36 @@ while ($row = mysqli_fetch_assoc($rs_result)) {
 ?>
 
 <tbody>
-                                        <tr>
-                                            <td> <?php echo $row["name"]; ?> </td>
-                                                                                        <td><?php echo $row["adesc"]; ?></td>
+                                        <tr >
+                                            <td ><?php echo $row["name"]; ?> </td>
+                                            <td ><?php echo $row["adesc"]; ?></td>
                                            
-                                            <td><a href='admin/achangeimage.php?key0=<?php echo  $row["albumid"];?>'><img src="admin/acatch/<?php echo $row["image"]; ?>"  width="100px"/></a></td>
-                                           <td><a href='albumdelete.php?key1=<?php echo $row["albumid"]; ?>'>Delete</a> | <a href = 'editalbum.php?key0=<?php echo $row["albumid"]; ?> &key1=<?php echo $row["name"]; ?> &key2=<?php echo $row["adesc"]; ?>&key3=<?php echo $row["image"]; ?> '>Edit</a>
+                                        <td><a href='admin/achangeimage.php?key0=<?php echo  $row["albumid"];?>'><img src="admin/acatch/<?php echo $row["image"]; ?>"  width="100px"/></a></td>
+                                        
+                                        
+                                        <td><a href='albumdelete.php?key1=<?php echo $row["albumid"];?>' onclick="return confirmDelete();" ><i class='bx bxs-edit bx-tada' style='color:#d20e0e'  ></i>  Delete</a>  | 
+                                        <a href = 'editalbum.php?key0=<?php echo $row["albumid"]; ?> &key1=<?php echo $row["name"]; ?> &key2=<?php echo $row["adesc"]; ?>&key3=<?php echo $row["image"]; ?>' onclick="return confirmEdit();"><i class='bx bx-message-alt-x bx-tada' style='color:#d20e0e' ></i>  Edit</a>
 										   
                                         </tr>
 										
 										</tbody>
 
+
+
+<script>
+    function confirmDelete() {
+        return confirm('Are you sure you want to permanently delete this album?');
+    }
+
+    // function confirmEdit() {
+    //     return confirm('Are you sure you want to edit this album?');
+    // }
+</script>
+
 <?php
 };
 ?>
+<br>
 </table>
 <strong>Pages  </strong>
 
@@ -79,6 +93,10 @@ for ($i=1; $i<=$total_pages; $i++) {
 echo "<a href='viewallalbums.php?page=".$i."' class='navigation_item selected_navigation_item'>".$i."</a> ";
 };
 ?>
+
+
+
+
 
 
                                 </div>
@@ -103,21 +121,13 @@ echo "<a href='viewallalbums.php?page=".$i."' class='navigation_item selected_na
 <!-- jQuery Version 1.11.0 -->
 </div>
     <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
-
-    <!-- DataTables JavaScript -->
     <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
     <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
 
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+
     <script>
     $(document).ready(function() {
         $('#dataTables-example').dataTable();

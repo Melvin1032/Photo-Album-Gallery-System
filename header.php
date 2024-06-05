@@ -66,8 +66,8 @@
             <i class='bx bx-upload bx-tada' style='color:#ff7703' ></i>  UPLOADS
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Upload a Photo</a></li>
-              <li><a class="dropdown-item" href="#">Manage Photos</a></li>
+              <li><a class="dropdown-item" href="addgallery.php">Upload a Photo</a></li>
+              <li><a class="dropdown-item" href="viewsgallery.php">Manage Photos</a></li>
               <li>
               </li>
             </ul>
@@ -77,14 +77,25 @@
 
             <br><br><br>
             <hr class="overview">
-            <p class="hr-text">ACCOUNTS</p>
+            <p class="hr-text">ACCOUNT SESSION</p>
           
             <li class="nav-item dropdowns">
               
-            <a href="logout.php" role="button">
-            <i class='bx bx-log-out bx-tada' style='color:#f90909' ></i></i> LOG-OUT
+            <a href="#" onclick="confirmLogout()" role="button">
+            <i class='bx bx-log-out bx-tada' style='color:#f90909'></i> LOG-OUT
             </a>
+
+            <!-- SCRIPT FOR THE LOG_OUT CONFIRMATION-->
           
+            <script>
+                  function confirmLogout() {
+          if (confirm("Are you sure you want to log out?")) {
+            window.location.href = "logout.php";
+           }
+          }
+            </script>
+
+
           </li>
         </ul>
        
