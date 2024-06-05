@@ -42,7 +42,7 @@
       
       <div class="offcanvas-body">
       <hr class="overview">
-      <p class="hr-text"></p>
+      <p class="hr-text">OVERVIEW</p>
 
       <li class="nav-item dropdown">
             <a href="home.php" role="button">
@@ -54,20 +54,20 @@
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class='bx bxs-grid-alt bx-tada' style='color:#ff7703' ></i> ALBUMS
+            <i class='bx bxs-grid-alt bx-tada' style='color:#ff7703' ></i>  ALBUMS
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="addalbum.php">Create Album</a></li>
-              <li><a class="dropdown-item" href="viewallalbums.php">View Albums (Album Management)</a></li>
+              <li><a class="dropdown-item" href="viewallalbums.php">Manage Albums</a></li>
             </ul>    
                     
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class='bx bx-upload bx-tada' style='color:#ff7703' ></i> UPLOADS
+            <i class='bx bx-upload bx-tada' style='color:#ff7703' ></i>  UPLOADS
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Add Photos (Upload)</a></li>
-              <li><a class="dropdown-item" href="#">View Photos (Photo Management)</a></li>
+              <li><a class="dropdown-item" href="#">Upload a Photo</a></li>
+              <li><a class="dropdown-item" href="#">Manage Photos</a></li>
               <li>
               </li>
             </ul>
@@ -75,11 +75,15 @@
        
 
 
-            <br><br><br><br><br>
+            <br><br><br>
             <hr class="overview">
             <p class="hr-text">ACCOUNTS</p>
           
-       
+            <li class="nav-item dropdowns">
+              
+            <a href="logout.php" role="button">
+            <i class='bx bx-log-out bx-tada' style='color:#f90909' ></i></i> LOG-OUT
+            </a>
           
           </li>
         </ul>

@@ -1,29 +1,11 @@
+<link rel="stylesheet" href="style.css">
+
 <?php session_start();
 if(isset($_SESSION['uname']))
 {
 ?>
 <?php include "header.php"; ?>
-<style>.navigation_item{
-		padding: 0px 5px;
-		background: #fff;
-		text-decoration: none;
-		
-		color: #e3e3e3 !important;
-		font-size: 12px;
-		border: 2px solid #e3e3e3;
-		border-radius: 1px;
-		-webkit-transition: all 0.2s linear;
-		-moz-transition: all 0.2s linear;
-		-ms-transition: all 0.2s linear;
-		-o-transition: all 0.2s linear;
-	}
-	.navigation_item:hover,.selected_navigation_item{
-		border: 2px solid #2A6496;
-		border-radius: 2px;
-		color: #2A6496 !important;
-		background: #fff;
-	}
-	</style>
+<div class="vall-container">
 <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -38,7 +20,7 @@ if(isset($_SESSION['uname']))
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        Your Album Control panel
+                        <h5>Album Management</h5>
                         </div>
                         <div class="panel-body">
                            <div class="table-responsive table-bordered">
@@ -119,6 +101,7 @@ echo "<a href='viewallalbums.php?page=".$i."' class='navigation_item selected_na
     </div>
     <!-- /#wrapper -->
 <!-- jQuery Version 1.11.0 -->
+</div>
     <script src="js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->

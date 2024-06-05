@@ -38,7 +38,9 @@
 }
   
 
-
+.overview {
+  width: 300px;
+}
 
 .nav {
   position: relative;
@@ -57,9 +59,9 @@
 
 .nav ul li a {
   display: block;
-  padding: 10px 25px; /* Adjust padding as needed */
+  padding: 10px 25px;
   text-decoration: none;
-  color: #fff; /* Text color */
+  color: #fff; 
 }
 
 .nav ul li a:hover {
@@ -83,6 +85,7 @@
 .nav-link:hover {
   color: rgb(255, 93, 34);
 }
+
 
 
 .nav-link a{
@@ -109,7 +112,10 @@
 } 
 
 
-
+.nav-item.dropdowns a:hover {
+  color: red;
+  padding: 10px 50px;
+}
 
 
 .dropdown-menu {
@@ -123,15 +129,10 @@
 }
 
 .dropdown-item:hover{
-  background-color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  padding: 10px 50px;
+  background-color: #00000000;
 }
 
-
-
-.dropdown-line hr {
-  color: red;
-}
 
 
 .form-control {
@@ -150,33 +151,7 @@
 }
 
 
-.lobtn a{
-  font-family: 'Cake';
-  font-weight: lighter;
-  color: white;
-}
 
-.lobtn .nav-link {
-  display: flex; 
-  align-items: center; 
-  margin-left: 50px;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.37);
-  border-radius: 10px;
-}
-
-
-
-.lobtn i {
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-.lobtn .nav-link:hover {
-  color:  #ff0000;
-  transform: scale(1.2);
-
-}
 
 
 .dropdown-menu img {
@@ -222,7 +197,7 @@
 
 
 .offcanvas-body {
-  overflow: auto; /* or overflow: visible; */
+  overflow: auto;
 }
 
 
@@ -232,10 +207,10 @@
 }
 
 .overview {
-  border: none; /* Remove default border */
-  height: 1px; /* Set the height of the line */
-  background-color: #ccc; /* Set the color of the line */
-  margin: 10px 0; /* Adjust margin as needed */
+  border: none; 
+  height: 1px; 
+  background-color: #ccc; 
+  margin: 10px 0;
 }
 
 
@@ -292,8 +267,8 @@
   color: white;
   font-weight: 300;
   font-size: 30px;
-  display: inline-block; /* Ensures h2 element respects padding */
-  margin: 0; /* Remove any default margins */
+  display: inline-block; 
+  margin: 0; 
 }
 
 .webtitle .buttons {
@@ -378,11 +353,11 @@
 }
 
 .carousel-item img {
-  transition: transform 0.3s ease; /* Add a transition effect */
+  transition: transform 0.3s ease;
 }
 
 .carousel-item img:hover {
-  transform: scale(1.1); /* Scale the image slightly on hover */
+  transform: scale(1.1);
 }
 
 
@@ -423,7 +398,7 @@ button .carousel-control-prev-icon {
 
 
 
-/* ALBUMS PREVIEW */
+/* ALBUMS PREVIEW   VGALL_PHP */  
 
 .albums-c1 {
   background: url(icons/gallerygrid-bg.jpg);
@@ -500,7 +475,7 @@ button .carousel-control-prev-icon {
 
 
 
-/* BLOG NAVIGATION IN VGALL */
+/* BLOG NAVIGATION IN VGALL_PHP */
 
 .blog_navigation {
   text-decoration: none;
@@ -552,33 +527,109 @@ padding: 10px 10px;
 
 
 
-/* PHOTO ALBUM GALLERY STYLING */
 
-/* Style for panel heading */
-.panel-heading {
-  background-color: #f5f5f5;
-  border-color: #ddd;
-  padding: 10px;
-  font-weight: bold;
+/* VIEW ALL ALBUMS  */
+
+/* .navigation_item{
+  padding: 0px 5px;
+  background: #fff;
+  text-decoration: none;
+  
+  color: #e3e3e3 !important;
+  font-size: 12px;
+  border: 2px solid #e3e3e3;
+  border-radius: 1px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+.navigation_item:hover,.selected_navigation_item{
+  border: 2px solid #2A6496;
+  border-radius: 2px;
+  color: #2A6496 !important;
+  background: #fff;
+} */
+
+
+/* PHOTO ALBUM  VIEW ALL_PHP */
+
+.vall-container {
+  background: url(icons/gallerygrid-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
 
-/* Style for panel body */
+
+.panel-heading {
+  background-color: var(--primary-color-dark);
+  border-color: #ddd;
+  padding: 30px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.panel-heading h5{
+  font-size: 20px;
+  color: white;
+}
+
+
+
 .panel-body {
   padding: 20px;
 }
 
-/* Style for form labels */
+.navigation_item{
+  padding: 0px 5px;
+  background: #fff;
+  text-decoration: none;
+  
+  color: #e3e3e3 !important;
+  font-size: 12px;
+  border: 2px solid #e3e3e3;
+  border-radius: 1px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+.navigation_item:hover,.selected_navigation_item{
+  border: 2px solid #2A6496;
+  border-radius: 2px;
+  color: #2A6496 !important;
+  background: #fff;
+}
+
+
+.table-responsive {
+  background-color: #141414;
+}
+
+
+
+
+
+
+
+
+
+
+/*  */
+
 .form-group label {
   font-weight: bold;
 }
 
-/* Style for form help blocks */
+
 .help-block {
   color: #777;
   font-size: 12px;
 }
 
-/* Style for form buttons */
+
 .btn-primary {
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -602,7 +653,7 @@ padding: 10px 10px;
   color: #333;
 }
 
-/* Style for form inputs */
+
 .form-control {
   width: 100%;
   padding: 6px 12px;
@@ -615,18 +666,18 @@ padding: 10px 10px;
   border-radius: 4px;
 }
 
-/* Style for form text area */
+
 .form-control textarea {
   resize: vertical;
 }
 
-/* Style for form upload input */
+
 input[type="file"] {
   display: block;
   margin-top: 5px;
 }
 
-/* Style for nested columns */
+
 .col-lg-6 {
   width: 50%;
   float: left;
@@ -636,7 +687,7 @@ input[type="file"] {
   padding-left: 15px;
 }
 
-/* Clear floats */
+
 .row::after {
   content: "";
   display: table;
