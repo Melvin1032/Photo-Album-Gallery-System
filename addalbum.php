@@ -30,13 +30,13 @@ $tmp=imagecreatetruecolor($newwidth,$newheight);
 
 imagecopyresampled($tmp,$src,0,0,0,0,$newwidth,$newheight,$width,$height);
 
-$filename = "admin/acatch/".$rd. $_FILES['upload']['name'];
+$filename = "acatch/".$rd. $_FILES['upload']['name'];
 imagejpeg($tmp,$filename,100);
 
 imagedestroy($src);
 imagedestroy($tmp); 
 $photo=$rd.$_FILES['upload']['name'];
-move_uploaded_file($_FILES["upload"]["tmp_name"],"admin/aupload/".$rd.$_FILES["upload"]["name"]);
+move_uploaded_file($_FILES["upload"]["tmp_name"],"aupload/".$rd.$_FILES["upload"]["name"]);
 
 if (empty($aname))
 {

@@ -36,7 +36,7 @@ $astatus=$row['status'];
 ?>
 
 <div class="picGallery">
-<?php echo "<img src='admin/acatch/$aimage' class='pic-image' alt='Pic' alt='$aname'>"; ?>
+<?php echo "<img src='acatch/$aimage' class='pic-image' alt='Pic' alt='$aname'>"; ?>
 <br><br>
 				<h6>
 				<?php echo "$aname"; ?> 
@@ -60,7 +60,7 @@ $astatus=$row['status'];
 			<div class="one-whole text-center">
             
 
-                <hr style="border:solid 1px black;margin-top:-70px;">
+                <hr style="border:solid 1px orange;margin-top:-70px;">
 				
 <p style="margin-left:75px">
 				<?php  
@@ -78,7 +78,7 @@ $gimage=$row['gimages'];
 
 ?>	
 	
-<?php	echo "<a href='admin/gupload/$gimage' target='_self' class='inline-block litebox' data-litebox-group='group-1'><img src='admin/gcatch/$gimage' class='inline-block' /></a> ";?>			
+<?php	echo "<a href='gupload/$gimage' target='_self' class='inline-block litebox' data-litebox-group='group-1'><img src='gcatch/$gimage' class='inline-block' /></a> ";?>			
 <?php } ?>				
 </p>
 				
@@ -100,7 +100,7 @@ $gimage=$row['gimages'];
 	<div class="sixteen columns bottom_line_dev">	
 		
 <br/><br/>		
-<hr style="border:solid 1px black;margin-top: 0px;">
+
 <br/>
 <br/>
 <br/>

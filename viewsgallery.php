@@ -3,18 +3,9 @@ if(isset($_SESSION['uname']))
 {
 ?>
 
-<?php include "header1.php"; ?>
-<?php include "menu/gmenu2.php"; ?>
+<?php include 'header.php'?>
+<?php include 'connect.php'?>
 
-<div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">View Gallery</h1>
-                </div>
-                
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
             <?php
 		
 		if(isset($_POST['submit']))
@@ -22,11 +13,13 @@ if(isset($_SESSION['uname']))
 $ename = $_POST['gname'];
 }
 			?>
-            <div class="row">
+
+<body class="addgal">
+            <div class="rows">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                           Select to View Gallery
+                        <div class="panel-heading-addgall">
+                           <h2>Manage Photos</h2>
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -34,12 +27,12 @@ $ename = $_POST['gname'];
                                     <form action="gslink.php" method="post" enctype="multipart/form-data" name="upload">
                                        
                                         <div class="form-group">
-                                            <label>Select Event Name or Title</label>
-                           <?php
-include"connect.php";
+                                            <h4>Please Select Album Name</h4>
+                                            <i class='bx bx-chevron-down bx-tada' ></i>
+<?php
 $sql = "select * from tbl_album where status='process'";
 $rs_result = mysqli_query ($con,$sql);
-echo "<select class='form-control' name='gname'>";
+echo  "<select class='form-control' name='gname'> ";
 while ($row = mysqli_fetch_assoc($rs_result)) {
 
 
@@ -48,41 +41,27 @@ echo "<option value=$row[albumid]>$row[name]</option>";
 										echo "</select>";
 										
 										?>
-                                        </div>
+                        
+              </div>
                                                                                 
                                         <button type="submit" class="btn btn-primary" name="submit">Go Next</button>
                                         
                                     </form>
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
+
                             </div>
-                            <!-- /.row (nested) -->
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /#page-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
 
-    <!-- jQuery Version 1.11.0 -->
+
     <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
 <?php
 }
@@ -92,4 +71,125 @@ header("location:login.php");
 }
 ?>
 </body>
+
+
+
+<style>
+
+.form-group .bx {
+    position: absolute;
+    top: 150px;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: black;
+}
+
+.form-group {
+    position: absolute;
+    top: 100px;
+    left: 100%;
+    transform: translate(-50%, -50%);
+   border: none;
+    }
+
+
+    h4 {
+        color: orange; /* Orange title */
+        font-size: 25px;
+        white-space: nowrap;
+        text-align: center;
+        padding: 50px 20px;
+        font-family: 'Drep';
+        
+    }
+
+    .form-control {
+        padding: 10px 0;
+        text-align: left;
+        padding-left: 20px;
+        font-size: 15px;
+        color: black;
+    }
+
+
+body{
+  color: #FFF0A5;
+  background: url(icons/whitegal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+
+.panel-heading-addgall {  
+  width: 100%;
+  height: 150px;
+  background: url(icons/manage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  border-color: #ddd;
+  padding: 30px;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.panel-heading-addgall h2 {
+  top: 15px;
+  font-family: 'Drep';
+  font-size: 45px;
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: 'Drep';
+  text-shadow: 2px 2px #00000091;
+} 
+
+
+.panel-body {
+  position: relative;
+  margin-top: 300px;
+  margin-bottom: -150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 550px;
+  background-color: rgb(116, 116, 116);
+  padding: 0  30px 40px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+
+
+
+.btn {
+        background-color: orange;
+        border: 2px solid orange;
+        color: #fff; /* White text */
+        padding: 20px 30px;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute;
+        white-space: nowrap;
+        top: 400px;
+        left: 100%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-family: 'Drep';
+    }
+    .btn:hover {
+        background-color: #ff8c00; /* Darker orange on hover */
+    }
+    
+
+</style>
+
+
+
+
+<br><br><br>
+<?php include "footer.php"; ?>
 </html>

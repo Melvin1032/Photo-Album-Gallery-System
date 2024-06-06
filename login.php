@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 
 <!DOCTYPE html>
@@ -13,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Dotcode-Gallery | Admin Login</title>
+    <title>Gallery Grid Login</title>
 
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">

@@ -2,7 +2,8 @@
 if(isset($_SESSION['uname']))
 {
 ?>
-<?php include "header.php"; ?>
+
+<?php include 'header.php'?>
 <?php $agid=$_REQUEST['id']; ?>
 <?php
 include"connect.php";
@@ -84,13 +85,45 @@ move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
 	
 ?>
 
+
       
             <div class="rows">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                     <div class="panel-heading-addgall">
-                           <h2>Fill This Form To Add Gallery</h2> 
+                           <h2>Upload a Photo</h2> 
                         </div>
+
+
+
+                        <div class="panel-body-addgal">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form action="#" method="post" enctype="multipart/form-data" name="upload">
+                                       
+                                        
+                                        <div class="form-group">
+                                        <div class="drop_box">
+      <header>
+      <h4>Upload Images</h4>
+
+      <p>Files Supported: JPEG Only.
+        <br><br>Best If you use 3:2 Image Ratio for Images you want to uplaod.</p> 
+      
+      <div class="file-upload-container">
+         <input type="file" name="upload1[]" multiple id="upload" accept=".jpg, .jpeg" required>
+      </div>
+    </div>
+
+   <div class="button-container">
+   <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+   <button type="reset" class="btn btn-default">Reset</button>
+    
+</div>
+                                        </div>
+
+                             
+                        <!-- 
                         <div class="panel-body-addgal">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -102,10 +135,8 @@ move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
                                             <input type="file" name="upload1[]" multiple  id="upload" />
                 
                                             <p class="help-block">Example "Recomended Image Size in pixel 400 X 300"</p>
-                                        </div>
-                                        
-                                        <button type="submit" class="btn btn-primary" name="submit">Submit Button</button>
-                                        
+                                        </div> -->
+    
                                     </form>
                                 </div>
                                 </div>
@@ -140,24 +171,153 @@ header("location:login.php");
 
 
 <style>
-    body {
-  color: #FFF0A5;
-  background: url(icons/navbg-blur.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 150vh;
-}
 
 
-.form-group {
 
-}
 
 
 /* ADD GALLERY_PHP  ADD IMAGES ON ALBUMS */
 
+
+
+/* Style for the file input */
+input[type="file"] {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+
+
+.btn {
+  text-decoration: none;
+  background-color: #005af0;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn:hover{
+  text-decoration: none;
+  background-color: black;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid orange;
+}
+
+.button-container {
+    position: relative;
+    top: 10px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    padding: 10px 170px;
+}
+
+.btn:nth-child(1) {
+    background-color: #00000000;
+    color: white;
+    outline: 1px solid green;
+}
+
+.btn:nth-child(1):hover {
+    background-color: green;
+    outline: 1px solid green;
+    
+}
+
+.btn:nth-child(2) {
+    background-color: #00000000;
+    color: white;
+    margin-left: 10px;
+    outline: 1px solid crimson;
+}
+
+.btn:nth-child(2):hover {
+    background-color: crimson;
+    outline: 1px solid crimson;
+    
+}
+
+
+
+
+.form-group {
+        margin-top: -50px;
+    }
+    h2 {
+        color: orange; /* Orange title */
+        font-size: 25px;
+    }
+
+    h3 {
+        color: white; /* Orange title */
+        position: relative;
+        text-align: center;
+        padding: 20px 20px;
+    }
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc; /* Grey border */
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #fff; /* White background */
+        color: #333; /* Black text */
+        font-family: "Poppins", sans-serif;
+    }
+    .help-block {
+        color: #666; /* Grey help block text */
+        font-style: italic;
+        font-size: 13px;
+    }
+    .drop_box {
+        border: 2px dashed orange; /* Orange dashed border */
+        text-align: center;
+        width: 350px;
+        padding: 100px 70px;
+        margin-top: 100px;
+    }
+
+    .drop_box p {
+        color: #666; /* Grey file supported text */
+        font-size: 12px
+    }
+    .btn {
+        background-color: orange; /* Orange button */
+        color: #fff; /* White text */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #ff8c00; /* Darker orange on hover */
+    }
+    
+
+
+
+
+
+
+
+
+body{
+  color: #FFF0A5;
+  background: url(icons/whitegal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+
 .panel-heading-addgall {  
-  margin-top: -100px;
   width: 100%;
   height: 150px;
   background: url(icons/manage.jpg);
@@ -165,7 +325,7 @@ header("location:login.php");
   background-repeat: no-repeat; 
   border-color: #ddd;
   padding: 30px;
-  margin-top: 110px;
+  margin-top: 100px;
   font-weight: bold;
 }
 
@@ -180,49 +340,29 @@ header("location:login.php");
   text-shadow: 2px 2px #00000091;
 } 
 
-.addgal-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.24)), url(icons/navbg-blur.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: auto;
-  font-family: 'Cake';
-}
 
 .panel-body-addgal {
-  position: absolute;
-  top: 60%;
+  position: relative;
+  margin-top: 300px;
+  margin-bottom: -150px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 550px;
   background-color: rgb(116, 116, 116);
   padding: 0  30px 40px;
   font-family: "Poppins", sans-serif;
-   background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   border-radius: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
 }
 
-.form-group {
-    top: 200px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: blue;
-    text-align: center;
-    padding: 50px 20px;
-}
 
 </style>
 
 
-
-
 </body>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
+
 <?php include "footer.php"; ?>
 </html>

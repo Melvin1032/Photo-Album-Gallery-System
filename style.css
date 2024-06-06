@@ -872,6 +872,7 @@ img{
   position: relative;
   width: 100%;
   height: 50%;
+
 }
 
 .picGallery .pic-image {
@@ -880,7 +881,7 @@ img{
   width: 190vh;
   height: 100vh;
   object-fit: cover; /* Ensures the image covers the entire container */
-  filter: blur(5px); /* Adjust the blur amount as needed */
+  filter: blur(3px); /* Adjust the blur amount as needed */
 }
 
 
@@ -893,10 +894,12 @@ img{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  color: #000000;
+  color: #ffffff;
   font-family: 'Cake';
   white-space: nowrap;
   animation: pulse 5s infinite; /* Add animation */
+  
+   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -908,8 +911,9 @@ img{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1; /* Ensure the h2 is above the blurred image */
-  color: #1b1b1b;
+  color: #ffffff;
   font-family: sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .pic-name {
@@ -922,56 +926,13 @@ img{
 
 
 
+/* ADD_GALLERY */
 
-/* ADD GALLERY_PHP  ADD IMAGES ON ALBUMS */
 
-.panel-heading-addgall {  
-  margin-top: -100px;
-  width: 100%;
-  height: 150px;
-  background: url(icons/manage.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; 
-  border-color: #ddd;
-  padding: 30px;
-  margin-top: 110px;
-  font-weight: bold;
-}
 
-.panel-heading-addgall h2 {
-  top: 15px;
-  font-family: 'Drep';
-  font-size: 45px;
-  color: white;
-  position: relative;
-  text-align: center;
-  font-family: 'Drep';
-  text-shadow: 2px 2px #00000091;
-} 
 
-.addgal-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.24)), url(icons/navbg-blur.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: auto;
-  font-family: 'Cake';
-}
 
-.panel-body-addgal {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
-  background-color: rgb(116, 116, 116);
-  padding: 0  30px 40px;
-  font-family: "Poppins", sans-serif;
-   background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-}
+
 
 
 

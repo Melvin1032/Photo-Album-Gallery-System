@@ -1,25 +1,26 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
+-- version 4.0.4
+-- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 06, 2024 at 07:33 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost
+-- Generation Time: Feb 04, 2017 at 06:09 AM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `photo-album`
+-- Database: `dotcode`
 --
+CREATE DATABASE IF NOT EXISTS `dotcode` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `dotcode`;
 
 -- --------------------------------------------------------
 
@@ -27,27 +28,26 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_album`
 --
 
-CREATE TABLE `tbl_album` (
-  `albumid` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_album` (
+  `albumid` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) NOT NULL,
   `adesc` varchar(1000) NOT NULL,
   `image` varchar(500) NOT NULL,
   `date` datetime NOT NULL,
-  `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `status` varchar(10) NOT NULL,
+  PRIMARY KEY (`albumid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `tbl_album`
 --
 
 INSERT INTO `tbl_album` (`albumid`, `name`, `adesc`, `image`, `date`, `status`) VALUES
-(1, 'Cars', 'My Cars Album', '13019lexus_lc_500_4k-HD.jpg', '2016-04-06 04:40:24', 'delete'),
-(2, 'Sunset PIC', 'My Sunset Album ', '21038british_virgin_islands_sunset-wide.jpg', '2016-04-06 04:52:04', 'delete'),
-(3, '3d wallpaers', 'My 3d wallpaers', '22862solid_abstract_colors-HD.jpg', '2016-04-06 04:54:51', 'delete'),
+(1, 'Cars', 'My Cars Album', '13019lexus_lc_500_4k-HD.jpg', '2016-04-06 04:40:24', 'process'),
+(2, 'Sunset PIC', 'My Sunset Album ', '21038british_virgin_islands_sunset-wide.jpg', '2016-04-06 04:52:04', 'process'),
+(3, '3d wallpaers', 'My 3d wallpaers', '22862solid_abstract_colors-HD.jpg', '2016-04-06 04:54:51', 'process'),
 (4, 'Heros', 'Mysuper heros', '4710iron_man_4k-HD.jpg', '2016-04-06 10:27:58', 'delete'),
-(5, 'Ladscape', 'My extrem ', '6567construction-40.jpg', '2016-04-06 10:28:52', 'delete'),
-(6, 'Melvin', 'sdasdasdasdbhjseghjyeqrwhiueqrwhioudeqwbjkn;adsBJKLFSdbjkldfsjkln;dfsajklnadfsbjkladfsjkldfsd', '566672373328707081_1372795553476831_6329126665965624752_n.jpg', '2024-06-06 16:19:47', 'delete'),
-(7, 'Melvin', 'Melvin', '1610303152328707081_1372795553476831_6329126665965624752_n.jpg', '2024-06-06 18:04:45', 'delete');
+(5, 'Ladscape', 'My extrem ', '6567construction-40.jpg', '2016-04-06 10:28:52', 'delete');
 
 -- --------------------------------------------------------
 
@@ -55,14 +55,15 @@ INSERT INTO `tbl_album` (`albumid`, `name`, `adesc`, `image`, `date`, `status`) 
 -- Table structure for table `tbl_gallery`
 --
 
-CREATE TABLE `tbl_gallery` (
-  `gid` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_gallery` (
+  `gid` int(10) NOT NULL AUTO_INCREMENT,
   `aid` int(10) NOT NULL,
   `gname` varchar(1000) NOT NULL,
   `gimages` varchar(1000) NOT NULL,
   `date` datetime NOT NULL,
-  `status` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `status` varchar(20) NOT NULL,
+  PRIMARY KEY (`gid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `tbl_gallery`
@@ -83,11 +84,7 @@ INSERT INTO `tbl_gallery` (`gid`, `aid`, `gname`, `gimages`, `date`, `status`) V
 (12, 3, '3d wallpaers', '125519colorful_polygons-wide.jpg', '2016-04-06 04:55:11', 'process'),
 (13, 3, '3d wallpaers', '229628glow_rays_abstract-HD.jpg', '2016-04-06 04:55:11', 'process'),
 (14, 3, '3d wallpaers', '316197htc_one_m8_background-wide.jpg', '2016-04-06 04:55:11', 'process'),
-(15, 3, '3d wallpaers', '49882the_great_race-wide.jpg', '2016-04-06 04:55:11', 'delete'),
-(16, 6, 'Melvin', '025885638356396025_209670475367330_4668177569604699461_n.jpg', '2024-06-06 16:20:12', 'process'),
-(17, 7, 'Melvin', '01549027219356396025_209670475367330_4668177569604699461_n.jpg', '2024-06-06 18:06:14', 'process'),
-(18, 7, 'Melvin', '0499245457mnrv.jpg', '2024-06-06 18:52:10', 'delete'),
-(19, 7, 'Melvin', '11051866813412122728_1087266922696249_1989827195504473999_n.jpg', '2024-06-06 18:52:10', 'delete');
+(15, 3, '3d wallpaers', '49882the_great_race-wide.jpg', '2016-04-06 04:55:11', 'delete');
 
 -- --------------------------------------------------------
 
@@ -95,12 +92,13 @@ INSERT INTO `tbl_gallery` (`gid`, `aid`, `gname`, `gimages`, `date`, `status`) V
 -- Table structure for table `tbl_login`
 --
 
-CREATE TABLE `tbl_login` (
-  `lid` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tbl_login` (
+  `lid` int(10) NOT NULL AUTO_INCREMENT,
   `username` varchar(10) NOT NULL,
   `password` varchar(10) NOT NULL,
-  `type` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `type` varchar(10) NOT NULL,
+  PRIMARY KEY (`lid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `tbl_login`
@@ -108,51 +106,6 @@ CREATE TABLE `tbl_login` (
 
 INSERT INTO `tbl_login` (`lid`, `username`, `password`, `type`) VALUES
 (1, 'admin', 'admin', 'admin');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `tbl_album`
---
-ALTER TABLE `tbl_album`
-  ADD PRIMARY KEY (`albumid`);
-
---
--- Indexes for table `tbl_gallery`
---
-ALTER TABLE `tbl_gallery`
-  ADD PRIMARY KEY (`gid`);
-
---
--- Indexes for table `tbl_login`
---
-ALTER TABLE `tbl_login`
-  ADD PRIMARY KEY (`lid`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tbl_album`
---
-ALTER TABLE `tbl_album`
-  MODIFY `albumid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `tbl_gallery`
---
-ALTER TABLE `tbl_gallery`
-  MODIFY `gid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `tbl_login`
---
-ALTER TABLE `tbl_login`
-  MODIFY `lid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

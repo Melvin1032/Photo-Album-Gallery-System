@@ -56,7 +56,7 @@ $astatus=$row['status'];
 
 ?>
 		<div class="pic" style="margin-right:1px;margin-left:1px;margin-top:1px;margin-bottom:1px">
-        <?php echo "<img src='admin/acatch/$aimage' class='pic-image' alt='Pic' alt='$aname'>"; ?>
+        <?php echo "<img src='acatch/$aimage' class='pic-image' alt='Pic' alt='$aname'>"; ?>
 
 			
 	
