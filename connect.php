@@ -2,7 +2,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "photo-album";
+$database = "gallery_grid";
 
 // Create connection
 $con = new mysqli($host, $username, $password, $database);

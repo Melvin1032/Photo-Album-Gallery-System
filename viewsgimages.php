@@ -55,7 +55,7 @@ if(isset($_SESSION['uname']))
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                         DOTCODE Gallery Control panel
+                         Manage Photos
                         </div>
                         <div class="panel-body">
                            <div class="table-responsive table-bordered">
