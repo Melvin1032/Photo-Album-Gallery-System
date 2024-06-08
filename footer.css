@@ -33,7 +33,12 @@ footer {
     width: fit-content;
     margin-bottom: 40px;
     position: relative;
+    margin-left: 15px;
 
+}
+
+.col p {
+    margin-left: 15px;
 }
 
 
