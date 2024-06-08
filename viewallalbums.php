@@ -1,9 +1,11 @@
-<link rel="stylesheet" href="style.css">
 
 <?php session_start();
 if(isset($_SESSION['uname']))
 {
 ?>
+
+<link rel="stylesheet" href="style.css">
+
 <?php include "header.php"; ?>
 <div class="vall-container">
 <div id="page-wrapper">
