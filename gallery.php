@@ -7,7 +7,9 @@
 
 	
 	<meta charset="utf-8">
-	<title>DotCode - Gallery</title>
+
+	<title>Gallery Grid - GALLERY</title>
+	<link rel="icon" href="icons/main-logo.png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="litebox-master/assets/css/litebox.css" rel="stylesheet" type="text/css" media="all" />

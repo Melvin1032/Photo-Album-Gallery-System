@@ -4,6 +4,9 @@ if(isset($_SESSION['uname']))
 {
 ?>
 
+
+<title>Gallery Grid - MANAGE ALBUMS</title>
+<link rel="icon" href="icons/main-logo.png">
 <link rel="stylesheet" href="style.css">
 
 <?php include "header.php"; ?>

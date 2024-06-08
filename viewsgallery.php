@@ -3,6 +3,10 @@ if(isset($_SESSION['uname']))
 {
 ?>
 
+
+<title>Gallery Grid - MANAGE PHOTOS</title>
+<link rel="icon" href="icons/main-logo.png">
+
 <?php include 'header.php'?>
 <?php include 'connect.php'?>
 

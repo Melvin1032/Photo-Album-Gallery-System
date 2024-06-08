@@ -12,7 +12,6 @@
 
   	
 </head>
-
 <body>
  <nav class="navbar navbar-dark bg-dark fixed-top">
 <a class="navbar-brand" href="#">
@@ -23,9 +22,9 @@
           <ul>
             </i>
             <li><a href="home.php">HOME</a></li>
-            <li><a href="vgall.php">GALLERY</a></li>
+            <li><a href="vgall.php">ALBUMS</a></li>
             <li><a href="about.php">ABOUT US</a></li>
-            <li><a href="faq.php">FAQ's</a></li>
+            <li><a href="faqs.php">FAQ's</a></li>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

@@ -3,6 +3,10 @@ if(isset($_SESSION['uname']))
 {
 ?>
 
+
+<title>Gallery Grid - ADD PHOTO</title>
+<link rel="icon" href="icons/main-logo.png">
+
 <?php include 'header.php'?>
 <?php $agid=$_REQUEST['id']; ?>
 <?php

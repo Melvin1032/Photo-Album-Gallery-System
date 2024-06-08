@@ -1,57 +1,25 @@
 <?php session_start();
-
-
 if(isset($_SESSION['uname']))
 {
 ?>
-<?php include "header.php"; ?>
+
 
 <?php $asid=$_REQUEST['ids']; ?>
-<style>
 
 
-.panel-heading {  
-  position: absolute;  
-  width: 100%;
-  height: 150px;
-  background: url(icons/manage.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; 
-  border-color: #ddd;
-  padding: 30px;
-  margin-top: 90px;
-  font-weight: bold;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Grid - MANAGE PHOTOS</title>
+    <link rel="icon" href="icons/main-logo.png">
+    
+<?php include "header.php"; ?>
 
-.panel-heading{
-  top: 15px;
-  font-family: 'Drep';
-  font-size: 45px;
-  color: white;
-  position: relative;
-  text-align: center;
-  font-family: 'Drep';
-  text-shadow: 2px 2px #00000091;
-} 
-
-.panel-body {
-    padding: 40px 90px;
-}
-
-	</style>
-
-
-<script>
-    function confirmDelete() {
-        return confirm('Are you sure you want to permanently delete this album?');
-    }
-</script>
-
-
-
-
-
-            <div class="rows">
+</head>
+<body>
+<div class="rows">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -121,41 +89,26 @@ echo "<a href='viewsgimages.php?page=$i&ids=$asid' class='navigation_item select
 
 
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
                             </div>
-                            <!-- /.row (nested) -->
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /#page-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
-<!-- jQuery Version 1.11.0 -->
+
     <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
     <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
-
-    <!-- DataTables JavaScript -->
     <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
 
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+</body>
+</html>
+
+          
+    
     <script>
     $(document).ready(function() {
         $('#dataTables-example').dataTable();
@@ -168,6 +121,49 @@ else
 header("location:login.php");
 }
 ?>
+
+
+
+<script>
+    function confirmDelete() {
+        return confirm('Are you sure you want to permanently delete this album?');
+    }
+</script>
+
+
+
+
+<style>
+.panel-heading {  
+  position: absolute;  
+  width: 100%;
+  height: 150px;
+  background: url(icons/manage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  border-color: #ddd;
+  padding: 30px;
+  margin-top: 90px;
+  font-weight: bold;
+}
+
+.panel-heading{
+  top: 15px;
+  font-family: 'Drep';
+  font-size: 45px;
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: 'Drep';
+  text-shadow: 2px 2px #00000091;
+} 
+
+.panel-body {
+    padding: 40px 90px;
+}
+
+	</style>
+
 </body>
 <?php include "footer.php"; ?>
 </html>
