@@ -58,7 +58,7 @@ while ($row = mysqli_fetch_assoc($rs_result)) {
                                             <td ><?php echo $row["name"]; ?> </td>
                                             <td ><?php echo $row["adesc"]; ?></td>
                                            
-                                        <td><a href='admin/achangeimage.php?key0=<?php echo  $row["albumid"];?>'><img src="acatch/<?php echo $row["image"]; ?>"  width="100px"/></a></td>
+                                        <td><a href='achangeimage.php?key0=<?php echo  $row["albumid"];?>'><img src="acatch/<?php echo $row["image"]; ?>"  width="100px"/></a></td>
                                         
                                         
                                         <td><a href='albumdelete.php?key1=<?php echo $row["albumid"];?>' onclick="return confirmDelete();" ><i class='bx bxs-edit bx-tada' style='color:#d20e0e'  ></i>  Delete</a>  | 

@@ -44,8 +44,8 @@ if(isset($_FILES['upload1'])){
 		$file_tmp =$_FILES['upload1']['tmp_name'][$key];
 		$file_type=$_FILES['upload1']['type'][$key];	
 		
-        if($file_size > 2097152){
-			$errors[]='File size must be less than 2 MB';
+        if($file_size > 52428800){
+			$errors[]='File size must be less than 50 MB';
         }	
 		
         $desired_dir="gupload";
@@ -81,7 +81,7 @@ move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
         }
     }
 	if(empty($errors)){
-	echo " <div class='alert alert-success'>Your Photos Is Successfully Uploded. <a href='viewphotos.php'>View Photos</a> |<a href='addevent.php'> Add new Photos</a></div>";
+	echo " <div class='alert alert-success'>Your Photos Is Successfully Uploded. <br><a href='viewphotos.php'>View Photos</a> |<a href='addevent.php'> Add new Photos</a></div>";
 	
 	}
 }
@@ -181,6 +181,56 @@ header("location:login.php");
 
 
 /* ADD GALLERY_PHP  ADD IMAGES ON ALBUMS */
+
+.alert-success {
+  padding-top: -20px;
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  margin-top: 100px; /* Half of the height */
+  color: green;
+  border: none;
+  z-index: 999; /* Adjust the z-index value */
+  background: linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.842));
+  backdrop-filter: blur(5.5px); /* Adjust the blur radius as needed */
+  border-radius: 20px;
+  font-size: 25px;  
+  font-family: 'Drep';
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); 
+  padding: 100px 0;
+}
+
+
+
+.alert a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Drep';
+
+}
+
+
+.alert-success a {
+    position: relative;
+    margin: auto;
+    color: white;
+}
+
+.alert-success {
+    text-align: center; /* Center the content horizontally */
+}
+
+.alert-success a:hover {
+    color: orange;
+    text-decoration: underline;
+    
+}
+
+
+
 
 
 

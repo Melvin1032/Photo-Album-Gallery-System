@@ -246,7 +246,7 @@
   transform: translate(-50%, -50%);
   height: auto;
   padding: 100px 100px;
-  top: 200px;
+  top: 100px;
 }
 
 
@@ -255,7 +255,7 @@
 .webtitle {
   position: relative;
   margin: auto;
-  top: 20px;
+  top: -80px;
   text-align: center;
   align-items: center;
 
@@ -271,7 +271,7 @@
   padding: 0 200px 0 200px;
   color: white;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 20px;
   display: inline-block; 
   margin: 0; 
 }
@@ -279,7 +279,7 @@
 .webtitle .buttons {
   position: relative;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .webtitle .buttons .btn {
@@ -303,8 +303,8 @@
   top: 100px;
   margin: auto;
   color:  rgb(255, 255, 255);
-  font-size: 30px; 
-  margin: 0 50px 0 50px;
+  font-size: 25px; 
+  margin: 0 20px 0 20px;
 }
 
 
@@ -335,14 +335,81 @@
 
 /* HOMEPAGE SECTION 2 */
 
-.section2 {
+.homec2 {
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 60vh;
-  background-color: #ffffff;
+  height: 70vh;
+}
+
+.homec3 {
+  background: url(icons/whitegal2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
 }
 
 
-/* GALLERY */
+
+#myLikes {
+
+  padding: 50px 0; /* Padding for top and bottom */
+}
+
+.portfolio-item {
+  margin-bottom: -60px; /* Spacing between portfolio items */
+}
+
+.portfolio-link {
+  display: block;
+  font-size: 50px; /* Size of the icon */
+  color: #343a40; /* Color of the icon */
+}
+
+.portfolio-link:hover {
+  text-decoration: none;
+}
+
+.portfolio-item-One .fa-th-large::before {
+  content: "\f009"; /* Unicode for the 'th-large' icon */
+}
+
+.portfolio-item-Two .fa-align-center::before {
+  content: "\f037"; /* Unicode for the 'align-center' icon */
+}
+
+.portfolio-item-Three .fa-camera-retro::before {
+  content: "\f083"; /* Unicode for the 'camera-retro' icon */
+}
+
+.portfolio-item-One header,
+.portfolio-item-Two header,
+.portfolio-item-Three header {
+  margin-top: 20px; /* Spacing between header and content */
+}
+
+.portfolio-item-One h3,
+.portfolio-item-Two h3,
+.portfolio-item-Three h3 {
+  font-size: 24px; /* Font size for the header */
+  margin-bottom: 10px; /* Spacing below the header */
+  text-align: center;
+  
+}
+
+.portfolio-item-One p,
+.portfolio-item-Two p,
+.portfolio-item-Three p {
+  font-size: 16px; /* Font size for the paragraph */
+  color: #6c757d; /* Text color */
+  line-height: 1.5; /* Line height for better readability */
+}
+
+
+
+
 
 .carousel-item img {
   width: auto;
@@ -372,10 +439,13 @@
 
 .carousel-caption h5{
   font-family: 'Drep';
-  font-size: 30px;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .carousel-caption p{
   font-family: 'Drep';
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
 }
 
 button .carousel-control-next-icon,
@@ -870,8 +940,8 @@ img{
 .picGallery .pic-image {
   top: 0;
   left: 0;
-  width: 190vh;
-  height: 100vh;
+  width: 196.2vh;
+  height: 110vh;
   object-fit: cover; /* Ensures the image covers the entire container */
   filter: blur(3px); /* Adjust the blur amount as needed */
 }
@@ -880,7 +950,7 @@ img{
 
 
 .picGallery h6 {
-  top: 700px;
+  top: 650px;
   font-size: 120px;
   position: absolute;
   left: 50%;
@@ -897,7 +967,7 @@ img{
 
 
 .picGallery p{
-  top: 800px;
+  top: 750px;
   font-size: 20px;
   position: absolute;
   left: 50%;

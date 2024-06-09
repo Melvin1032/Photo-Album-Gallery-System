@@ -24,7 +24,7 @@
             <li><a href="home.php">HOME</a></li>
             <li><a href="vgall.php">ALBUMS</a></li>
             <li><a href="about.php">ABOUT US</a></li>
-            <li><a href="faqs.php">FAQ's</a></li>
+            <li><a href="faqs.php">FAQ'S</a></li>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

@@ -19,13 +19,13 @@ session_start();
     <link rel="stylesheet" href="login.css">
 
 
-</head>
+</head> 
 
 <body>
 
 <div class="container" id="container">
     <div class="form-container sign-up">
-        <form >
+        <form method="POST">
             <h1>Create Account</h1>
             <div class="social-icons">
                 <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -34,27 +34,25 @@ session_start();
                 <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <span>or use your email for registeration</span>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button>Sign Up</button>
+            <input type="text" placeholder="Name" name="username" required>
+            <input type="email" placeholder="Email"  required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="hidden" placeholder="Password" name="type" value="admin" required>
+            <!-- <button type="submit" name="saveAccount">Sign-Up</button> -->
         </form>
     </div>
     <div class="form-container sign-in">
-        <form role="form" action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-            <h1>Sign In</h1>
-            <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <span>or use your email password</span>
-            <input type="username" placeholder="Username" name="username" type="username" autofocus>
-            <input type="password" placeholder="Password" name="password" type="password" value="">
-            <a href="#">Forget Your Password?</a>
-            <button>Sign In</button>
-        </form>
+    <form role="form" action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
+    <h1>Sign In</h1>
+    <div class="social-icons">
+        <!-- Social icons here -->
+    </div>
+    <span>or use your email password</span>
+    <input type="text" placeholder="Username" name="username" autofocus>
+    <input type="password" placeholder="Password" name="password">
+    <a href="#">Forget Your Password?</a>
+    <button type="submit" name="login">Sign In</button> <!-- Added name attribute -->
+</form>
     </div>
     <div class="toggle-container">
         <div class="toggle">
@@ -64,61 +62,77 @@ session_start();
                 <button class="hidden" id="login">Sign In</button>
             </div>
             <div class="toggle-panel toggle-right">
-                <h1>Hello, Friend!</h1>
-                <p>Register with your personal details to use all of site features</p>
-                <button class="hidden" id="register">Sign Up</button>
+                <h1>Hello, There!</h1>
+                <p>Log-in with your personal details to use all of site features</p>
+                <!-- <button class="hidden" id="register">Sign Up</button> -->
             </div>
         </div>
     </div>
 </div>
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-$myuser = $_POST['username'];
-$mypass= $_POST['password'];
-    if ($myuser == '' || $mypass == '') {
-        echo " <div class='alert alert-danger'>Enter username or password</div>";
-
-}
-else
-{
 
 
+// Include database connection
 include "connect.php";
-$query = "SELECT * FROM tbl_login WHERE username = '$myuser' AND password = '$mypass'";
-$result = $con->query($query);
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+    if (isset($_POST['login'])) { // Check if the sign-in form is submitted
+        $myuser = isset($_POST['username']) ? $_POST['username'] : '';
+        $mypass = isset($_POST['password']) ? $_POST['password'] : '';
 
-if (mysqli_num_rows($result)>0)
-{
-   $row = mysqli_fetch_array($result);
+        // Check if username or password is empty
+        if ($myuser == '' || $mypass == '') {
+            echo "<div class='alert alert-danger'>Enter username and password</div>";
+        } else {
+            // Query to check if the user exists with the provided username and password
+            $query = "SELECT * FROM tbl_login WHERE username = '$myuser' AND password = '$mypass'";
+            $result = $con->query($query);
 
-   if ($row[3]=='admin')
-	$_SESSION['uname']=$myuser;
-    echo "<script>location.href='home.php'</script>";
+            if ($result && $result->num_rows > 0) {
+                // User found, set session variable to log the user in
+                $_SESSION['uname'] = $myuser;
+                
+                // Redirect to home page or any desired page
+                header("Location: home.php");
+                exit; // Stop further execution
+            } else {
+                echo "<div class='alert alert-danger'>Incorrect username or password</div>";
+            }
+        }
+    }
 
- 
-}
-else
-{
-  echo " <div class='alert alert-danger'>   Your username or password is incorrect</div>";
-  echo ""; 
- 
-}
-}
-}
 ?>
 
-<script>const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
 
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
-});
 
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-});</script>
+<!-- REGISTER -->
+
+
+<?php
+if (isset($_POST['saveAccount']))
+{
+  if (!$con->query("INSERT INTO tbl_login (username, password, type) VALUES ('$_POST[username]',' $_POST[password]',' $_POST[type]')")) {
+    echo "<div claass='alert alert-success'>Failed. Error is:".$con->error."</div>";
+  }
+  else
+    echo "<div class='alert alert-info text-center'>Account Added Successfully!</div>";
+
+}
+
+include "connect.php";
+// ?>
+
+// <script>const container = document.getElementById('container');
+// const registerBtn = document.getElementById('register');
+// const loginBtn = document.getElementById('login');
+
+// registerBtn.addEventListener('click', () => {
+//     container.classList.add("active");
+// });
+
+// loginBtn.addEventListener('click', () => {
+//     container.classList.remove("active");
+// });</script>
 
 </body>
 

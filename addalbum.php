@@ -66,7 +66,6 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
     else
     {
         echo "error";
-        print mysql_error();
     }
 
 // echo "<script>location.href='addevent.php </script";
@@ -138,13 +137,6 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 /* ALERT */
 
 /* Base alert styles */
-.alert-success {
-  padding-top: 20px;
-  height: 100px;
-  color: #155724;
-  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
-
-}
 
 
 
@@ -158,7 +150,7 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
     color: #08bf1b; /* Set the color */
     z-index: 9999; /* Set a high z-index to bring it to the front */
     font-size: 100px;
-    top: 580px;
+    top: 410px;
     left: 47%; /* Move the element to the middle of its container */
     transform: translateY(-50%); /* Adjust for center alignment */
     animation: burst 2.5s ease;
@@ -178,12 +170,12 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 }
 
 .alert-success {
-  padding-top: 20px;
+  padding-top: -20px;
   width: 800px;
-  height: 400px;
+  height: 300px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   margin-top: 100px; /* Half of the height */
   color: green;
@@ -195,7 +187,7 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
   font-size: 25px;  
   font-family: 'Drep';
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); 
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 
@@ -203,7 +195,7 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 .alert a {
   text-decoration: none;
   font-size: 30px;
-  font-family 'Drep';
+  font-family: 'Drep';
 
 }
 
@@ -246,14 +238,15 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 .card {
   border-radius: 50px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  width: 600px;
-  height: auto;
+  width: 700px;
+  height: 610px;
   background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.534)), url(icons/navbg-blur.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0  30px 40px;
   font-family: "Poppins", sans-serif;
   box-shadow: 0 5px 60px 0 rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
 }
 
 .card h3 {
@@ -265,7 +258,7 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 
 .drop_box {
   margin: 10px 0;
-  padding: 30px;
+  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -275,14 +268,13 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 }
 
 .drop_box h4 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: #2e2e2e;
 }
 
 .drop_box p {
-  margin-top: 10px;
-  margin-bottom: 20px;
+
   font-size: 1px;
   color: #a3a3a3;
 }
@@ -295,7 +287,7 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 
 /* Style for the file input */
 input[type="file"] {
-  padding: 10px;
+  padding: 1px;
   border-radius: 5px;
   font-size: 16px;
   outline: none;
@@ -380,7 +372,7 @@ input[type="file"] {
     }
     .form-control {
         width: 100%;
-        padding: 10px;
+        padding: 5px;
         border: 1px solid #ccc; /* Grey border */
         border-radius: 4px;
         box-sizing: border-box;
@@ -391,13 +383,13 @@ input[type="file"] {
     .help-block {
         color: #666; /* Grey help block text */
         font-style: italic;
-        font-size: 13px;
+        font-size: 12px;
     }
     .drop_box {
         border: 2px dashed orange; /* Orange dashed border */
-        padding: 20px;
+        padding: 10px;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 5px;
     }
     .drop_box header h4 {
         color: orange; /* Orange header text */
@@ -462,9 +454,9 @@ body {
   left: 50%;
   top: 720px;
   transform: translate(-50%, -50%);
-  font-size: 17px;
+  font-size: 13px;
   color: gray;
-}
+} 
 
 
 hr {

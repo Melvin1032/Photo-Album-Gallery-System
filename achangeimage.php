@@ -2,20 +2,12 @@
 if(isset($_SESSION['uname']))
 {
 ?>
-<?php include "header1.php"; ?>
-<?php include "menu/amenu2.php"; ?>
+<?php include "header.php"; ?>
+
 <?php 
 $mykey1=$_REQUEST['key0'];
 ?>
-<div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Update album Image</h1>
-                </div>
-                
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
+
             <script type="application/javascript">
 function img_up(){var fup = document.getElementById('upload');var fileName = fup.value;var ext = fileName.substring(fileName.lastIndexOf('.') + 1);if(ext == "JPEG" || ext == "jpeg" || ext == "jpg" || ext == "JPG" || ext== "PNG" ||  ext=="png"){return true;}else{alert("Image format not supported!");fup.focus();return false;}}</script>
 <?php
@@ -67,11 +59,11 @@ echo "<script>location.href='viewallalbums.php'</script>";
 ?>
 
             
-            <div class="row">
+            <div class="rows">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Fill This Form To Memeber Image
+                        <div class="panel-heading-addgall">
+                            <h2>Change Album Cover Photo</h2>
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -101,6 +93,7 @@ echo "<script>location.href='viewallalbums.php'</script>";
                     </div>
                     <!-- /.panel -->
                 </div>
+
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
@@ -128,5 +121,49 @@ else
 header("location:login.php");
 }
 ?>
+
+
+
+
+
+<style>
+
+
+
+
+
+
+
+.panel-heading-addgall {  
+  width: 100%;
+  height: 150px;
+  background: url(icons/manage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  border-color: #ddd;
+  padding: 30px;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.panel-heading-addgall h2 {
+  top: 15px;
+  font-family: 'Drep';
+  font-size: 45px;
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: 'Drep';
+  text-shadow: 2px 2px #00000091;
+} 
+
+
+
+</style>
+
+
+
+
 </body>
+<?php include "footer.php"; ?>
 </html>

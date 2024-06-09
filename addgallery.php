@@ -151,13 +151,13 @@ body{
 
 
 .panel-body {
-  position: relative;
-  margin-top: 300px;
+    position: relative;
+  margin-top: 200px;
   margin-bottom: -150px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
-  height: 550px;
+  height: 350px;
   background-color: rgb(116, 116, 116);
   padding: 0  30px 40px;
   font-family: "Poppins", sans-serif;
@@ -170,19 +170,19 @@ body{
 
 
 .btn {
-        background-color: orange;
-        border: 2px solid orange;
-        color: #fff; /* White text */
-        padding: 20px 30px;
-        border-radius: 4px;
-        cursor: pointer;
-        position: absolute;
-        white-space: nowrap;
-        top: 400px;
-        left: 100%;
-        transform: translate(-50%, -50%);
-        font-size: 20px;
-        font-family: 'Drep';
+            background-color: orange;
+            border: 2px solid orange;
+            color: #fff; /* White text */
+            padding: 10px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: absolute;
+            white-space: nowrap;
+            top: 280px;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-family: 'Drep';
     }
     .btn:hover {
         background-color: #ff8c00; /* Darker orange on hover */
