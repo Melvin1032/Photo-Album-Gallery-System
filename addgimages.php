@@ -81,7 +81,7 @@ move_uploaded_file($file_tmp,"$desired_dir/".$file_name);
         }
     }
 	if(empty($errors)){
-	echo " <div class='alert alert-success'>Your Photos Is Successfully Uploded. <br><a href='viewphotos.php'>View Photos</a> |<a href='addevent.php'> Add new Photos</a></div>";
+	echo " <div class='alert alert-success'>Your Photos Is Successfully Uploded. <br><a href='vgall.php'>View Albums</a> |<a href='viewsgallery.php'> Manage Photos</a></div>";
 	
 	}
 }

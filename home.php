@@ -47,19 +47,19 @@ if(isset($_SESSION['uname']))
 <div class="homec2">
 
 
-<br><br> 
+
 
 <!-- My Likes Grid Section -->
 <section id="myLikes">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h3>What does Gallery Grid offers</h3>
+                <h3>What Does Gallery Grid Offers</h3>
             <br><br><br>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-3 portfolio-item">
                 <a href="#" class="portfolio-link text-center" data-toggle="modal">
                     <span class="fa fa-th-large" aria-hidden="true" title="This symbolizes I Love to listen good music
                     "></span>
@@ -73,7 +73,7 @@ if(isset($_SESSION['uname']))
                     </p>
                 </article>                    
             </div>
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-3 portfolio-item">
                 <a href="#" class="portfolio-link text-center" data-toggle="modal">
                     <span class="fa fa-align-center" aria-hidden="true" title="This symbolizes I Like to design and develop websites
                     "></span>
@@ -87,7 +87,7 @@ if(isset($_SESSION['uname']))
                     </p>
                 </article>                    
             </div>
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-3 portfolio-item">
                 <a href="#" class="portfolio-link text-center" data-toggle="modal">
                     <span class="fa fa-fw fa-camera-retro" aria-hidden="true" title="This symbolizes I Love to capture moments
                     "></span>
@@ -114,11 +114,19 @@ if(isset($_SESSION['uname']))
 <br><br><br><br><br>
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="2000">
+    <div class="carousel-item active" data-bs-interval="2500">
       <img src="icons/group_pic2.png" class="d-block w-100" alt="..."  style="width: 100px;">
       <br><br>
       <div class="carousel-caption d-none d-md-block">
         <h5>Development Team</h5>  
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="22000">
+      <img src="icons/pic2.png" class="d-block w-100" alt="..."  style="width: 100px;">
+      <br><br><br>
+      <div class="carousel-caption d-none d-md-block">
+      <h5>John Melvin "Melvz" Macabeo</h5> 
+      <p>Full-Stack Developer</p>  
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
@@ -129,14 +137,7 @@ if(isset($_SESSION['uname']))
         <p>Quality Assurance (QA) Tester</p> 
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="icons/pic2.png" class="d-block w-100" alt="..."  style="width: 100px;">
-      <br><br><br>
-      <div class="carousel-caption d-none d-md-block">
-      <h5>John Melvin "Melvz" Macabeo</h5> 
-      <p>Full-Stack Developer</p>  
-      </div>
-    </div>
+
     <div class="carousel-item" data-bs-interval="2000">
       <img src="icons/pic3.png" class="d-block w-100" alt="..."  style="width: 100px;">
       <br><br><br>

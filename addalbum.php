@@ -54,13 +54,13 @@ $query="INSERT INTO tbl_album(name,adesc,image,date,status) VALUES ('$aname','$a
 if(mysqli_query($con, $query))
     {
       
-echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <br> <a href='viewallalbums.php'>View albums</a> |<a href='addalbum.php'> Add new album</a></div>";
+echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <br> <a href='vgall.php'>View albums</a> |<a href='addalbum.php'> Add new album</a><i class='bx bx-check-circle' style='color:#08bf1b' ></i></div>";
 ?>
 <script>
     // Hide the form when success alert is displayed
     document.getElementById('albumForm').style.display = 'none';
 </script>
-<i class='bx bx-check-circle' style='color:#08bf1b' ></i>
+
 <?php
     }
     else
@@ -146,16 +146,16 @@ echo " <div class='alert alert-success'>Your New Album Is Successfully Added. <b
 }
 
 .bx.bx-check-circle {
-    position: relative;
+    position: absolute;
     color: #08bf1b; /* Set the color */
     z-index: 9999; /* Set a high z-index to bring it to the front */
     font-size: 100px;
     top: 410px;
-    left: 47%; /* Move the element to the middle of its container */
     transform: translateY(-50%); /* Adjust for center alignment */
     animation: burst 2.5s ease;
     animation-fill-mode: forwards;
-   
+    left: 43%;
+    top: 50%;
 }
 
 

@@ -82,7 +82,7 @@ header("location:login.php");
 
 .form-group .bx {
     position: absolute;
-    top: 150px;
+    top: 180px;
     left: 90%;
     transform: translate(-50%, -50%);
     font-size: 20px;

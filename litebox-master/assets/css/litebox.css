@@ -135,7 +135,7 @@
 	.litebox-overlay img,
 	.litebox-overlay iframe {
 		display: inline-block;
-		width: 1000px;
+		width: 650px;
 		height: auto;
 		margin: 0 auto;
 		vertical-align: middle;

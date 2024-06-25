@@ -96,19 +96,20 @@ echo "</span>";
 ?>				
 					</div>
 				</div>
-		</div> 
+			</div> 
 	</section>
 
+	
+<div class="shortcut-btn-gal">
+	<a href="addalbum.php"><h4><i class='bx bx-add-to-queue bx-tada' style='color:#f89c0a' ></i>Create New Album</h4></a>
+	<a href="viewallalbums.php"><h4><i class='bx bx-edit-alt bx-tada' style='color:#f89c0a' ></i>Manage Albums</h4></a>
+</div>
+
 		</div>
-
-		
-
 	</div>	
-
+</div>
 	
 
-		</div>
-	
 
 		<?php
 }
